@@ -1,6 +1,7 @@
 
 body {
   margin: 0;
+  color: grey;
 }
 
 .header {
@@ -55,12 +56,110 @@ body {
 }
 
 .body .profile {
-  flex-grow: 0.35;
-  background: purple;
-
+  flex-grow: 0.2;
 }
 
-.body .projects {
+.body .profile .profile-pic {
+  margin: 2rem;
+  height: 20rem;
+  border-radius: 50%;
+}
+
+.body .body-right {
   flex-grow: 0.65;
-  background: yellow;
 }
+
+.body .body-right > * {
+  height: 50%;
+}
+
+.body .body-right .projects {
+  margin-top: 2rem;
+  border: 2px solid grey;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.body .body-right .projects .project {
+  margin: auto;
+  height: 30%;
+  width: 70%;
+  border: 2px solid grey;
+  border-radius: 10px;
+}
+
+
+.body .body-right .calendar-container {
+  height: 20rem;
+}
+
+.body .body-right .calendar-title{
+  color: darkslategray;
+}
+
+
+
+.body .body-right .calendar-container .calendar {
+  margin: auto;
+  border: 1px solid lightgrey;
+  background-color: white;
+  width: auto;
+  padding: 20px;
+  padding-top: 30px;
+  padding-left: 0;
+  height: 90px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+}
+
+.body .body-right .calendar-container .square {
+  width: 10px;
+  height: 10px;
+  margin: 1px;
+  opacity: 0.8;
+  border-radius: 2px;
+}
+
+.square-grey {
+  background-color: #ebedf0;
+}
+
+.square-light-green {
+  background-color: #9be9a8;
+}
+
+.square-dark-green {
+  background-color: #30a14e;
+}
+.calendar-months {
+  display: flex;
+  margin-bottom: -1.5rem;
+  overflow-x: hidden;
+  width: 90%;
+}
+
+.calendar-months .month {
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  list-style-type: none;
+  margin: auto;
+  margin-left: 0;
+}
+
+.calendar-legend {
+  display: flex;
+  justify-content: right;
+}
+
+.calendar-legend .legend-squares {
+  list-style-type: none;
+  display: flex;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 2rem;
+}
+
