@@ -1,8 +1,6 @@
 import React from 'react'
 import Profile from './Profile'
 import Projects from './Projects'
-import Calendar from './Calendar'
-
 
 export default function Body(props) {
 	return (
@@ -10,7 +8,6 @@ export default function Body(props) {
 			<Profile />
 			<div className="body-right">
 				<Projects />
-				<Calendar />
 			</div>
 		</div>
 	)

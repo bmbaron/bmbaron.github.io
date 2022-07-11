@@ -1,16 +1,16 @@
 import React from 'react'
 import Project from './Project'
+import projectData from '../data/projectData.js'
 export default function Projects(props) {
-	let projects = Array(3).fill(0)
+	let projects = projectData
 
 	projects = projects.map((project) => {
-		return <Project />
+		return <Project name={project.name} src={project.src}/>
 	})
-
-	console.log(projects)
 
 	return (
 		<div className="projects">
+			<h1 className="projects-label">Projects</h1>
 			{projects}
 		</div>
 	)

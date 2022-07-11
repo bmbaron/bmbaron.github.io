@@ -17,17 +17,9 @@ export default function CalendarSquares() {
 			<h4 className="calendar-title">Coffees consumed in the last year</h4>
 			<ul className="calendar-months">
 				<li className="month">Jan</li>
-				<li className="month">Feb</li>
-				<li className="month">Mar</li>
 				<li className="month">Apr</li>
-				<li className="month">May</li>
-				<li className="month">Jun</li>
 				<li className="month">Jul</li>
-				<li className="month">Aug</li>
-				<li className="month">Sep</li>
 				<li className="month">Oct</li>
-				<li className="month">Nov</li>
-				<li className="month">Dec</li>
 			</ul>
 			<div className="calendar">
 				{squareArray.map((col, index) => {
