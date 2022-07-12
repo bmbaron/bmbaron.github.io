@@ -162,7 +162,7 @@ body {
 
 .calendar-legend {
   display: flex;
-  justify-content: right;
+  justify-content: center;
   margin-top: -1rem;
 }
 
@@ -205,7 +205,11 @@ body {
   margin: auto;
   height: 200px;
   transform:scaleX(-1);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.profile .kingfisher > * {
+  font-size: 0.8em;
 }
 
 .body .body-right {
