@@ -14,7 +14,7 @@ export default function CalendarSquares() {
 
 	return (
 		<div className="calendar-container">
-			<h4 className="calendar-title">Coffees consumed in the last year</h4>
+			<h4 className="calendar-title">coffees consumed in the last year</h4>
 			<ul className="calendar-months">
 				<li className="month">Jan</li>
 				<li className="month">Apr</li>

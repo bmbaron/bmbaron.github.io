@@ -1,3 +1,9 @@
+html, body {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  min-height: 100vh;
+}
+
 body {
   margin: 0;
   color: grey;
@@ -56,11 +62,12 @@ body {
 .body {
   background-color: white;
   display: flex;
-  height: 100vh;
+  height: auto;
+  margin: auto;
 }
 
 .body .profile {
-  flex-grow: 0.2;
+  flex-grow: 0.3;
   text-align: center;
 }
 
@@ -79,9 +86,13 @@ body {
 .body .profile .social-links {
   width: 60%;
   margin: auto;
-  margin-top: 2rem;
   display: flex;
   justify-content: space-evenly;
+  margin-bottom: 3rem;
+}
+
+.body .profile .social-links > *:hover {
+  transform:scale(1.2);
 }
 
 .body .calendar-container {
@@ -89,6 +100,7 @@ body {
   height: auto;
   margin: auto;
   width: 85%;
+  margin-bottom: 2rem;
 }
 
 .body .calendar-title{
@@ -151,6 +163,7 @@ body {
 .calendar-legend {
   display: flex;
   justify-content: right;
+  margin-top: -1rem;
 }
 
 .calendar-legend .legend-squares {
@@ -161,14 +174,51 @@ body {
   margin-right: 2rem;
 }
 
+.profile .fact-container {
+  width: 60%;
+  margin: auto;
+  background: linear-gradient(rgb(148, 207, 239), rgb(128, 247, 185));
+  border-radius: 10px;
+  padding: 0.2rem;
+  margin-bottom: 2rem;
+}
+.profile .fact-container .fact-list {
+  margin-top: 2rem;
+  width: auto;
+  padding-left: 0;
+  width: 100%;
+}
+
+.profile .fact-container .fact-list > * {
+  list-style: none;
+  margin: 10px;
+  color: black;
+  font-size: 1.2rem;
+}
+
+.profile .kingfisher {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile .kingfisher-pic {
+  margin: auto;
+  height: 200px;
+  transform:scaleX(-1);
+  margin-bottom: 1rem;
+}
+
 .body .body-right {
-  flex-grow: 0.65;
+  flex-grow: 0.7;
+  animation: animate-in 1s backwards;
+  -webkit-animation: animate-in 1s backwards;
 }
 
 .body .body-right .projects {
   display: flex;
   flex-direction: column;
   text-align: center;
+  border-left: 2px solid lightgray;
 }
 
 .body .body-right .projects .projects-label {
@@ -189,22 +239,44 @@ body {
   padding: 8px;
   text-decoration: none;
   font-size: 1.5em;
-  color: black;
-  background: rgb(245, 230, 66);
-  opacity: 0.75;
+  color: white;
+  background: #3bd355;
+  opacity: 0.9;
   border-radius: 10px;
 }
 
 .body .body-right .projects .project .project-link:hover {
   opacity: 1;
-  transform:scale(1.2);
+  transform:scale(1.1);
 }
-
 
 iframe {
   margin: auto;
   border-radius: 10px;
-  border: 1px solid black;
+  border: 1px solid lightgray;
+  background-color: white;
+}
+
+.footer {
+  bottom: 0;
+  width: 100vw;
+  left: 0;
+  height: 4rem;
+  line-height: 4rem;
+  font-family:Arial, Helvetica, sans-serif;
+  background-color: #24292f;
+  color: #ffffff;
+  text-align: center;
+}
+
+.footer > * {
+  width: 80%;
+  margin: auto;
+  word-break: normal;
+  word-wrap: break-word;
+}
+span.line {
+  display: inline-block;
 }
 
 @media only screen and (max-width: 800px) {
@@ -214,17 +286,87 @@ iframe {
   .header .links {
     display: none;
   }
-  .body .profile .social-links {
-    margin-top: 2rem;
-    margin-bottom: 5rem;
+  .header .icon-container {
+    justify-content: right;
+    margin-left: 0;
   }
-  .body .calendar-container {
+  .header .icon-container .icon {
+    margin-right: 0;
+  }
+
+  .body .profile {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 80%;
+    animation: animate-in 1s backwards;
+    -webkit-animation: animate-in 1s backwards;
+  }
+  .body .profile .profile-pic {
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    height: 30vh;
+    width: 30vh;
+    border-radius: 50%;
+  }
+  .profile .calendar-container {
+    width: 100%;
+    margin: 0;
+    margin-top: -2rem;
+  }
+  .profile .fact-container {
+    margin-top: 2rem;
     width: 85%;
   }
+  .profile .kingfisher {
+    display: none;
+  }
+  .body .body-right {
+    animation: none;
+    -webkit-animation: none;
+  }
+
   .body .body-right .projects {
-    margin-bottom: 5rem;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    border: none;
+    border-top: 2px solid lightgray;
+  }
+  .body .body-right .projects .project {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
   }
   .body .body-right .projects .projects-label {
     margin-top: 3rem;
   }
+  .body .body-right .projects .project .project-link {
+    font-size: 1em;
+  }
+  .footer {
+    display: flex;
+    height: auto;
+  }
+  .footer > * {
+    line-height: 2rem;
+  }
 }
+
+@keyframes animate-in {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+@-webkit-keyframes animate-in {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }}

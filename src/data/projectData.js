@@ -14,7 +14,7 @@ export default [
 	{
 		key: 3,
 		id: 3,
-		name: "App that uses APIs",
+		name: "App that consumes APIs (built with a partner)",
 		src: "https://bmbaron.github.io/air-quality-app"
 	}
 ]
