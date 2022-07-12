@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.96cf1672.css",
-    "main.js": "/static/js/main.b4efaa7f.js",
+    "main.css": "/static/css/main.a155bbda.css",
+    "main.js": "/static/js/main.e9191da8.js",
     "static/media/ben baron.jpeg": "/static/media/ben baron.aeb47a26fb9566c1acc3.jpeg",
     "static/media/low poly kingfisher.jpeg": "/static/media/low poly kingfisher.401354b1d14e0ce15c65.jpeg",
     "index.html": "/index.html",
-    "main.96cf1672.css.map": "/static/css/main.96cf1672.css.map",
-    "main.b4efaa7f.js.map": "/static/js/main.b4efaa7f.js.map"
+    "main.a155bbda.css.map": "/static/css/main.a155bbda.css.map",
+    "main.e9191da8.js.map": "/static/js/main.e9191da8.js.map"
   },
   "entrypoints": [
-    "static/css/main.96cf1672.css",
-    "static/js/main.b4efaa7f.js"
+    "static/css/main.a155bbda.css",
+    "static/js/main.e9191da8.js"
   ]
 }
