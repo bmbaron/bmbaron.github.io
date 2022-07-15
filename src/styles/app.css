@@ -15,14 +15,19 @@ body {
 	top: 0;
 	height: 3rem;
 	display: flex;
+	padding: 10px;
+	width: 50%;
+	margin: auto;
+	justify-content: space-between;
 }
 
 .control-button {
-	flex-grow: 0.5;
+	width: 45%;
 	background-color: rgb(62, 62, 208);
 	border: none;
+	border-radius: 20px;
 	color: white;
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 }
 
 .control-button:first-child {

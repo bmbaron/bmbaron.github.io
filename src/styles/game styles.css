@@ -26,10 +26,9 @@
   background-position-y: 2rem;
 }
 
-.game-board:not(.bacteria){
+.game-board:not(.game-over-caption){
   filter: drop-shadow(5px 5px 2px rgb(42, 41, 39));
 }
-
 
 .bacteria-area {
   margin: auto;
@@ -51,9 +50,9 @@
   width: 25px;
   height: auto;
   position: relative;
-  color:rgb(60, 236, 145);
+  color:rgb(222, 94, 247);
   text-shadow: 2px 2px;
-  filter: drop-shadow(2px 2px 2px rgb(141, 135, 124));
+  filter: drop-shadow(2px 2px 2px rgb(255, 255, 255));
   pointer-events: all;
 }
 
@@ -68,6 +67,10 @@
   margin-top: 2rem;
 }
 
+.game-over-caption {
+  color: red;
+}
+
 @media only screen and (max-width: 800px) {
 
   .bacteria-container {
@@ -78,7 +81,7 @@
 
 @keyframes rotate {
   from{
-      transform: rotate(0deg);
+      transform: rotate(180deg);
       opacity: 0;
   }
   to{
