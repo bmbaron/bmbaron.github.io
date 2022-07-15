@@ -1,0 +1,102 @@
+
+.game-container {
+  width: 100vw;
+  height: auto;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.game-container h2 {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 0.5rem;
+}
+
+.game-container h3 {
+  margin: auto;
+  width: 70%;
+}
+
+.game-board{
+  margin: auto;
+  height: 80vh;
+  background-size: 150vh;
+  background-position:top;
+  background-repeat: no-repeat;
+  background-position-y: 2rem;
+}
+
+.game-board:not(.bacteria){
+  filter: drop-shadow(5px 5px 2px rgb(42, 41, 39));
+}
+
+
+.bacteria-area {
+  margin: auto;
+}
+
+.bacteria-container {
+  position: absolute;
+  margin: auto;
+  margin-top: 3rem;
+  --width: 100px;
+  margin-left: calc(50% - 0.5*var(--width));
+  display: flex;
+  flex-wrap: wrap;
+  width: 100px;
+  padding-top: 4rem;
+}
+
+.bacteria {
+  width: 25px;
+  height: auto;
+  position: relative;
+  color:rgb(60, 236, 145);
+  text-shadow: 2px 2px;
+  filter: drop-shadow(2px 2px 2px rgb(141, 135, 124));
+  pointer-events: all;
+}
+
+.bacteria:hover {
+  cursor: pointer;
+}
+
+.flask {
+  color: rgb(27, 235, 93);
+  font-size: 100px;
+  filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
+  margin-top: 2rem;
+}
+
+@media only screen and (max-width: 800px) {
+
+  .bacteria-container {
+    transform: scale(0.8);
+    margin-top: 5rem;
+  }
+}
+
+@keyframes rotate {
+  from{
+      transform: rotate(0deg);
+      opacity: 0;
+  }
+  to{
+      transform: rotate(360deg);
+      opacity: 1;
+  }
+}
+@-webkit-keyframes rotate {
+  from{
+      -webkit-transform: rotate(0deg);
+  }
+  to{
+      -webkit-transform: rotate(360deg);
+  }
+}
+
+.rotating {
+  animation: rotate 1s linear;
+  -webkit-animation: rotate 1s linear;
+}
+

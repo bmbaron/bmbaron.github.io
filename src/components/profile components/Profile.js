@@ -35,7 +35,7 @@ export default function Profile(props) {
 			</div>
 			<div className="kingfisher">
 				<img id="kingfisher" className="kingfisher-pic" src={kingfisher} alt="low poly kingfisher"></img>
-				<label HTMLFor="kingfisher">space-filling image by <a href="https://pixabay.com/users/manuchi-1728328/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3249914">Денис Марчук</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3249914">Pixabay</a></label>
+				<label htmlFor="kingfisher">space-filling image by <a href="https://pixabay.com/users/manuchi-1728328/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3249914">Денис Марчук</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3249914">Pixabay</a></label>
 			</div>
 		</div>
 	)

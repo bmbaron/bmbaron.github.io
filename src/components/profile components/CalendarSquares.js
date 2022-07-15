@@ -10,7 +10,6 @@ export default function CalendarSquares() {
 		return (col.map(() => getRandomNum())
 		)
 	})
-	console.log(squareArray)
 
 	return (
 		<div className="calendar-container">
