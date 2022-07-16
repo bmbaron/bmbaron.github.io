@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './styles/app.css'
 import './styles/game styles.css'
 import './styles/profile styles.css'
+import Landscape from './components/Landscape'
 import Game from './components/game components/Game'
 // import Header from './components/profile components/Header'
 import Body from './components/profile components/Body'
@@ -25,7 +26,14 @@ function App() {
         <button className="control-button" onClick={() => setMode('profile')}> profile </button>
         <button className="control-button" onClick={() => setMode('game')}> mini-game </button>
       </div>
-
+      {mode === undefined &&
+        <>
+          <div className="greeting-container">
+            {/* <h1 className="greeting">Welcome to my site!<br></br><br></br> Please have a look around and feel free to reach me on the socials if you'd like to connect. <br></br><br></br> -Ben Baron</h1> */}
+            <Landscape />
+          </div>
+        </>
+      }
       {mode === 'game' &&
         <Game />
       }

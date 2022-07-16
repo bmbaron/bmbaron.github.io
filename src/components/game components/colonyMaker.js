@@ -6,7 +6,7 @@ export default function Game(props) {
 	const generations = [1,1,2,4,8,14,34,68,124]
 	let containerStyle
 
-	const blah = [];
+	const bacteria = [];
 	for (let i = 0; i < props.score; i += 1) {
 		for(let j = 0; j < generations[i]; j += 1) {
 			if (generations[i] === 14) {
@@ -21,13 +21,22 @@ export default function Game(props) {
 			if (generations[i] === 124) {
 				containerStyle = { "width": "400px", "--width": "400px"}
 			}
-			blah.push(<FontAwesomeIcon icon={faBacterium} className="bacteria rotating" onClick={props.updateScore} style={{pointerEvents: props.gameOver ? 'none' : 'auto', display: 'auto'}}/>);
+			bacteria.push(<FontAwesomeIcon
+				icon={faBacterium}
+				className="bacteria rotating"
+				onClick={props.updateScore}
+				style={{
+					pointerEvents: props.gameOver ? 'none' : 'auto',
+					display: 'auto'
+				}}
+				/>
+			)
 		}
 	}
 
 	return (
 		<div className="bacteria-container" style={containerStyle}>
-			{blah}
+			{bacteria}
 		</div>
 	)
 }
