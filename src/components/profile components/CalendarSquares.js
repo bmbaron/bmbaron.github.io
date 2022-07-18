@@ -6,8 +6,25 @@ export default function CalendarSquares() {
 	}
 
 	const emptyArray = new Array(52).fill(new Array(7).fill(0))
-	const squareArray = emptyArray.map((col) => {
+	let squareArray = emptyArray.map((col) => {
 		return (col.map(() => getRandomNum())
+		)
+	})
+
+	squareArray = squareArray.map((col, index) => {
+		return (col.map((row, subIndex) => {
+			let returnedSquare;
+			if (squareArray[index][subIndex] === 0) {
+				returnedSquare = <div className="square square-grey" key={Math.random()}></div>
+			}
+			else if (squareArray[index][subIndex] === 1) {
+				returnedSquare = <div className="square square-light-green" key={Math.random()}></div>
+			}
+			else if (squareArray[index][subIndex] === 2) {
+				returnedSquare = <div className="square square-dark-green" key={Math.random()}></div>
+			}
+			return returnedSquare
+		})
 		)
 	})
 
@@ -21,23 +38,7 @@ export default function CalendarSquares() {
 				<li className="month">Oct</li>
 			</ul>
 			<div className="calendar">
-				{squareArray.map((col, index) => {
-					return (col.map((row, subIndex) => {
-						let returnedSquare;
-						if (squareArray[index][subIndex] === 0) {
-							returnedSquare = <div className="square square-grey"></div>
-						}
-						else if (squareArray[index][subIndex] === 1) {
-							returnedSquare = <div className="square square-light-green"></div>
-						}
-						else if (squareArray[index][subIndex] === 2) {
-							returnedSquare = <div className="square square-dark-green"></div>
-						}
-						return returnedSquare
-					})
-					)
-				})
-				}
+				{squareArray}
 			</div>
 			<div className="calendar-legend">
 				<h5>Less</h5>

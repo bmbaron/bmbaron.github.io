@@ -23,6 +23,7 @@ export default function Game(props) {
 			}
 			bacteria.push(<FontAwesomeIcon
 				icon={faBacterium}
+				key={Math.random()}
 				className="bacteria rotating"
 				onClick={props.updateScore}
 				style={{

@@ -1,11 +1,17 @@
 import React from 'react'
 import Project from './Project'
 import projectData from '../data/projectData.js'
+import homestayImage from '../images/thohomestay.png'
+import todoImage from '../images/todolist.png'
+import airqualityImage from '../images/airquality.png'
+
 export default function Projects(props) {
 	let projects = projectData
 
-	projects = projects.map((project) => {
-		return <Project name={project.name} src={project.src}/>
+	let importedImages = [homestayImage, todoImage, airqualityImage]
+
+	projects = projects.map((project, index) => {
+		return <Project name={project.name} key={Math.random()} src={importedImages[index]} github={project.github}/>
 	})
 
 	return (

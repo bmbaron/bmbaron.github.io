@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBuilding } from '@fortawesome/free-solid-svg-icons'
 import { faSun } from '@fortawesome/free-solid-svg-icons'
 import { faCloud } from '@fortawesome/free-solid-svg-icons'
 
 export default function Landscape(props) {
+	const [time, setTime] = useState(Date.now());
+
+	useEffect(() => {
+		const interval = setInterval(() => setTime(Date.now()), 8000);
+		return () => {
+			clearInterval(interval);
+		};
+	}, []);
 
 	function getRandomNum() {
 		return Math.random()* 1.5 + 1;
@@ -19,6 +27,7 @@ export default function Landscape(props) {
 	const buildings = template.map(() => {
 		return (
 			<FontAwesomeIcon
+			  key={time*Math.random()}
 				icon={faBuilding}
 				className="building"
 				style={{

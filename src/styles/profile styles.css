@@ -1,69 +1,30 @@
-
-.header {
-  background-color: #24292f;
-  color: rgba(255,255,255,0.9);
-  padding: 1px;
-}
-
-.header > * {
-  font-size: 1rem;
-  display: flex;
-}
-
-.header .name .icon {
-  margin: auto;
-  margin-left: 1rem;
-}
-
-.header .searchbox {
-  display: flex;
-  flex-grow: 0.5;
-  margin: 10px;
-  border: 1px solid rgba(255,255,255,0.7);
-  background-color: #24292f;
-  color: rgba(255,255,255,0.7);
-  border-radius: 5px;
-}
-
-.header .searchbox::placeholder {
-  color: rgba(255,255,255,0.7);
-}
-
-.header .links {
-  display: flex;
-  flex-grow: 0.2;
-  justify-content: space-between;
-  font-weight: bold;
-  list-style-type: none;
-}
-
-.header .icon-container {
-  display: flex;
-  flex-grow: 1;
-  justify-content: right;
-  margin: 20px;
-}
-
-.header .icon-container .icon {
-  margin-right: 20px;
-}
-
 .body {
   background-color: white;
   display: flex;
   height: auto;
   margin: auto;
+  margin-top: 2rem;
 }
 
 .body .profile {
-  flex-grow: 0.3;
+  flex-grow: 0.6;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+}
+
+.body .profile .profile-pic-container {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  height: 20rem;
 }
 
 .body .profile .profile-pic {
-  margin: 2rem;
+  margin: auto;
   margin-bottom: 0;
-  height: 20rem;
+  height: 50%;
+  width: auto;
   border-radius: 50%;
 }
 
@@ -74,10 +35,10 @@
 
 .body .profile .social-links {
   width: 60%;
-  margin: auto;
   display: flex;
+  margin-left: auto;
+  margin-right: auto;
   justify-content: space-evenly;
-  margin-bottom: 3rem;
 }
 
 .body .profile .social-links > *:hover {
@@ -89,13 +50,12 @@
   height: auto;
   margin: auto;
   width: 85%;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .body .calendar-title{
-  margin-top: 2.5rem;
   margin-bottom: 0;
-  color: darkslategray;
+  color: black;
 }
 
 .body .calendar-container .calendar {
@@ -142,7 +102,6 @@
 
 .calendar-months .month {
   font-weight: bold;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 1em;
   list-style-type: none;
   margin: 2px;
@@ -164,18 +123,17 @@
 }
 
 .profile .fact-container {
-  width: 60%;
-  margin: auto;
-  background: linear-gradient(rgb(148, 207, 239), rgb(128, 247, 185));
-  border-radius: 10px;
-  padding: 0.2rem;
-  margin-bottom: 2rem;
-}
-.profile .fact-container .fact-list {
-  margin-top: 2rem;
-  width: auto;
-  padding-left: 0;
   width: 100%;
+  /* background: #30a14e; */
+}
+
+.profile .fact-container .fact-list {
+  margin: auto;
+  margin-top: 2rem;
+  width: 80%;
+  padding-left: 0;
+  border: 2px solid rgb(157, 157, 157);
+  border-radius: 20px;
 }
 
 .profile .fact-container .fact-list > * {
@@ -183,22 +141,6 @@
   margin: 10px;
   color: black;
   font-size: 1.2rem;
-}
-
-.profile .kingfisher {
-  display: flex;
-  flex-direction: column;
-}
-
-.profile .kingfisher-pic {
-  margin: auto;
-  height: 200px;
-  transform:scaleX(-1);
-  margin-bottom: 0.5rem;
-}
-
-.profile .kingfisher > * {
-  font-size: 0.8em;
 }
 
 .body .body-right {
@@ -215,14 +157,23 @@
 }
 
 .body .body-right .projects .projects-label {
-  margin-bottom: 0;
+  margin-bottom: 2rem;
+  color: black;
 }
 
 .body .body-right .projects .project {
   margin: 20px;
-  border-radius: 10px;
+  margin-bottom: 3rem;
   display: flex;
   flex-direction: column;
+}
+
+.body .body-right .projects .project img {
+  margin: auto;
+  object-fit: cover;
+  object-position: -2px;
+  border: 1px solid lightgrey;
+  max-width: 600px !important;
 }
 
 .body .body-right .projects .project .project-link {
@@ -243,21 +194,13 @@
   transform:scale(1.1);
 }
 
-iframe {
-  margin: auto;
-  border-radius: 10px;
-  border: 1px solid lightgray;
-  background-color: white;
-}
-
 .footer {
   bottom: 0;
   width: 100vw;
   left: 0;
   height: 4rem;
   line-height: 4rem;
-  font-family:Arial, Helvetica, sans-serif;
-  background-color: #24292f;
+  background-color: rgb(55, 55, 247);
   color: #ffffff;
   text-align: center;
 }
@@ -276,62 +219,50 @@ span.line {
   .body {
     flex-direction: column;
   }
-  .header .links {
-    display: none;
-  }
-  .header .icon-container {
-    justify-content: right;
-    margin-left: 0;
-  }
-  .header .icon-container .icon {
-    margin-right: 0;
-  }
-
   .body .profile {
     display: flex;
     flex-direction: column;
     margin: auto;
-    width: 80%;
+    width: 100%;
     animation: animate-in 1s backwards;
     -webkit-animation: animate-in 1s backwards;
   }
+  .body .profile .profile-pic-container {
+    margin-bottom: 0;
+  }
   .body .profile .profile-pic {
     margin: auto;
-    margin-top: 1rem;
     margin-bottom: 0;
     height: 30vh;
     width: 30vh;
-    border-radius: 50%;
   }
   .profile .calendar-container {
-    width: 100%;
-    margin: 0;
-    margin-top: -2rem;
+    width: 80%;
+    margin-bottom: 0rem;
+    margin-top: 8rem;
   }
   .profile .fact-container {
-    margin-top: 2rem;
-    width: 85%;
+    padding-bottom: 4rem;
+    width: 100vw;
+    border-bottom: 2px solid rgb(157, 157, 157);
   }
-  .profile .kingfisher {
-    display: none;
+  .profile .fact-container .fact-list {
+    width: 70%;
   }
   .body .body-right {
     animation: none;
     -webkit-animation: none;
   }
-
   .body .body-right .projects {
     margin: auto;
-    margin-top: 2rem;
     margin-bottom: 2rem;
     width: 100%;
     border: none;
-    border-top: 2px solid lightgray;
   }
   .body .body-right .projects .project {
     margin-left: auto;
     margin-right: auto;
-    width: 70%;
+    width: 100%;
   }
   .body .body-right .projects .projects-label {
     margin-top: 3rem;
